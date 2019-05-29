@@ -1,0 +1,38 @@
+{
+  "name": "step-todo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/jeezliu/step-todo.git",
+  "author": "931498440@qq.com",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^11.12.0",
+    "@types/jest": "^24.0.9",
+    "@types/react": "^16.8.13",
+    "@types/react-dom": "^16.8.3",
+    "@types/hoist-non-react-statics": "^3.3.1",
+    "antd": "^3.16.2",
+    "awesome-typescript-loader": "^5.2.1",
+    "clean-webpack-plugin": "^2.0.1",
+    "faker": "^4.1.0",
+    "html-webpack-plugin": "^3.2.0",
+    "immutability-helper": "^3.0.0",
+    "react": "^16.8.6",
+    "react-dnd": "^7.4.5",
+    "react-dnd-html5-backend": "^7.4.4",
+    "react-dom": "^16.8.6",
+    "react-frame-component": "^4.1.0",
+    "source-map-loader": "^0.2.4",
+    "typescript": "^3.4.2",
+    "webpack": "^4.29.6",
+    "webpack-dev-server": "^3.3.0"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --open"
+  },
+  "devDependencies": {
+    "css-loader": "^2.1.1",
+    "style-loader": "^0.23.1",
+    "webpack-cli": "^3.3.0"
+  }
+}
