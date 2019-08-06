@@ -1,24 +1,22 @@
-import * as React from 'react';
+import React from 'react';
+import { StepProps } from './Step';
 
-interface StepsProps {
-  title: string;
-}
-export const Steps: React.FC<StepsProps> = ({
-  title,
-  children
-}) => {
+export const Steps: React.FC = ({ children }) => {
   const filteredChildren = React.Children.toArray(children).filter(c => !!c);
   return (
-    <div className="steps-container">
-      {React.Children.map(filteredChildren, (child, index) => {
-      if (!child) {
-        return null;
-      }
-      const childProps = {
-        ...child.props
-      };
-      return React.cloneElement(child, childProps);
-    })}
+    <div className="steps-wrapper">
+      {React.Children.map(
+        filteredChildren as React.ReactElement<StepProps>[],
+        (child: React.ReactElement<StepProps>): React.ReactNode => {
+          if (!child) {
+            return null;
+          }
+          const childProps = {
+            ...child.props,
+          };
+          return React.cloneElement(child, childProps);
+        }
+      )}
     </div>
-  )
-}
+  );
+};
