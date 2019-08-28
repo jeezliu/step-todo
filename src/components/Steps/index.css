@@ -1,0 +1,53 @@
+.step-container {
+  display: flex;
+}
+.step-title {
+  color: #6cbfee;
+  font-size: 1.2em;
+}
+.step-description {
+  margin: 0 0 15px 120px;
+  background: #F7F7F7;
+  color: #000;
+  padding: 1em;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  position: relative;
+  border-radius: 5px;
+}
+.step-decoration {
+  position: relative;
+}
+.step-description::after {
+  right: 100%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-right-color: #F7F7F7;
+  border-width: 10px;
+  top: 10px;
+}
+
+.step-decoration .double-circle {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  color: #ffffff;
+  background: #43B1F1;
+  border-radius: 50%;
+  box-shadow: 0 0 0 8px #afdcf8;
+  text-align: center;
+  top: 0;
+}
+.vertical-rect {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 10px;
+  background: #ffdcf8;
+  left: 15%;
+}

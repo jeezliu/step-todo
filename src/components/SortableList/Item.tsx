@@ -15,7 +15,7 @@ export interface ItemProps {
   id: any;
   text: string;
   index: number;
-  moveCard: (dragIndex: number, hoverIndex: number) => void;
+  moveItem: (dragIndex: number, hoverIndex: number) => void;
 }
 
 interface DragItem {
@@ -23,7 +23,7 @@ interface DragItem {
   id: string;
   type: string;
 }
-const Item: React.FC<ItemProps> = ({ id, text, index, moveCard }) => {
+const Item: React.FC<ItemProps> = ({ id, text, index, moveItem }) => {
   const ref = useRef<HTMLDivElement>(null);
   const [, drop] = useDrop({
     accept: ItemTypes.LIST_ITEM,
@@ -67,7 +67,7 @@ const Item: React.FC<ItemProps> = ({ id, text, index, moveCard }) => {
       }
 
       // Time to actually perform the action
-      moveCard(dragIndex, hoverIndex);
+      moveItem(dragIndex, hoverIndex);
 
       // Note: we're mutating the monitor item here!
       // Generally it's better to avoid mutations,

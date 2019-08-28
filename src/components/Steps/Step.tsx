@@ -1,20 +1,22 @@
 import * as React from 'react';
+import './index.css';
 
 export interface StepProps {
   title: string;
-  description: React.Component | string;
+  description: React.ReactNode;
 }
 export const Step: React.FC<StepProps> = ({
   title,
   description
 }) => {
   return (
-    <div>
-      <div className="title">{title}</div>
-      <div className="decoration">
-        {description}
+    <div className="step-container">
+      <div className="step-title">{title}</div>
+      <div className="step-decoration">
+        <div className="vertical-rect"></div>
+        <div className="double-circle"></div>
       </div>
-      <div className="description">{description}</div>
+      <div className="step-description">{description}</div>
     </div>
   );
 }

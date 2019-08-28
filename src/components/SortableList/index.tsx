@@ -6,6 +6,10 @@ const style = {
   width: 400,
 };
 
+export interface ItemProps {
+  items: {id: number; text: string}
+};
+
 const SortableList: React.FC = () => {
   {
     const [items, setItems] = useState([
@@ -40,7 +44,7 @@ const SortableList: React.FC = () => {
       },
     ]);
 
-    const moveCard = useCallback(
+    const moveItem = useCallback(
       (dragIndex: number, hoverIndex: number) => {
         const dragCard = items[dragIndex];
         setItems(
@@ -59,7 +63,7 @@ const SortableList: React.FC = () => {
           index={index}
           id={item.id}
           text={item.text}
-          moveCard={moveCard}
+          moveItem={moveItem}
         />
       );
     };

@@ -1,7 +1,9 @@
 import React from 'react';
 import { StepProps } from './Step';
 
-export const Steps: React.FC = ({ children }) => {
+export { Step } from './Step';
+
+const Steps: React.FC = ({ children }) => {
   const filteredChildren = React.Children.toArray(children).filter(c => !!c);
   return (
     <div className="steps-wrapper">
@@ -20,3 +22,4 @@ export const Steps: React.FC = ({ children }) => {
     </div>
   );
 };
+export default Steps;
